@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1598448405 source:d:\fac\primer cuatrimestre programación segundo intento\tp1cb\fuctions.c
+
+1598450976 source:d:\fac\primer cuatrimestre programación segundo intento\tp1cb\main.c
+	<stdio.h>
+	<stdlib.h>
+
