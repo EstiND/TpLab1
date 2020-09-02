@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1599009624 source:d:\fac\primer cuatrimestre programación segundo intento\trabajo práctico n°1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+
+1598972332 source:d:\fac\primer cuatrimestre programación segundo intento\trabajo práctico n°1\functions.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+
+1599010417 d:\fac\primer cuatrimestre programación segundo intento\trabajo práctico n°1\functions.h
+

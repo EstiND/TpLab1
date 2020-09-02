@@ -1,62 +1,115 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "fuctions.h"
+#include "functions.h"
 
 int main()
 {
-    int answer;
-    float operating1;
-    float operating2;
-    float sumResult;
-    float subtractionResult;
-    float divisionResult;
-    float multiplicationResult;
-    float factorialResult;
+    char option;
+    float num1;
+    float num2;
+    float sum;
+    float subtraction;
+    float division;
+    float multiplication;
+    long int factorial1;
+    long int factorial2;
+    int flagNum1 = 0;
+    int flagNum2 = 0;
+    int flagOpetarions = 0;
 
-    do {
-
+    do{
     system("cls");
-    printf("\n\nWelcome!, use a number to select your option:\n1-Add the first operating.\n2-Add the second operating.\n3-Calculate all the operations.\n4-Show results.\n5-Exit.\n");
-    scanf("%d", &answer);
+    menu();
+    scanf("%c",&option);
 
-    switch (answer)
+    switch (option){
+
+    case 'a':
+    num1 = getNum(num1);
+    flagNum1 = 1;
+    printf("The first operating has been added.\n\n");
+    system("pause");
+    break;
+
+    case 'b':
+    num2 = getNum(num2);
+    flagNum2 = 1;
+    printf("The second operating has been added.\n\n");
+    system("pause");
+    break;
+
+    case 'c':
+    if (flagNum1 == 0){
+    printf("\nYou have to add the first operating before this option.\n\n");
+    system("pause");
+    }
+    else if (flagNum2 == 0){
+    printf("\nYou have to add the second operating before this option.\n\n");
+    system("pause");
+    }
+    else
     {
-    case 1:
-    printf("Add the first operating: ");
-    scanf("%f", &operating1);
-    printf("got cha'\n");
+    sum = functionSum(num1, num2);
+    subtraction = functionSubtraction(num1, num2);
+    division = functionDivision(num1, num2);
+    multiplication = functionMultiplication(num1, num2);
+    factorial1 = factorial(num1);
+    factorial2 = factorial(num2);
+    flagOpetarions = 1;
+    printf("Calculating....\n\n");
     system("pause");
+    }
     break;
 
-    case 2:
-    printf("Add the second operating: ");
-    scanf("%f", &operating2);
-    printf("got cha'\n");
+    case 'd':
+
+    if (flagOpetarions == 0)
+    {
+    printf("You need to do the operations before show them\n");
     system("pause");
-    break;
+    }
+    else
+    {
+    printf("\nThe sum of %.2f + %.2f is: %.2f\n", num1, num2, sum);
+    printf("\nThe subtraction of %.2f - %.2f is: %.2f\n", num1, num2, subtraction);
 
-    case 3:
-    sumResult = operating1 + operating2;
-    subtractionResult = operating1 - operating2;
-    divisionResult = operating1 / operating2;
-    multiplicationResult = operating1 * operating2;
-    //Factorial asi re lindo
-
-    printf("\nCalculating.");
-    printf("\nCalculating..");
-    printf("\nCalculating...");
-    printf("\nCalculating....");
-    printf("\nCalculating.....");
-
-    break;
-
-    case 4:
-    printf("The results are :\n-Sum :%.0f\n-Subtraction :%.0f\n-Division :%.2f\n-Multiplication :%.2f\n-Factiorial :\n", sumResult, subtractionResult, divisionResult, multiplicationResult);
-    system("pause");
-    break;
+    if(num2 == 0)
+    {
+    printf("\nYou can't divide for 0.\n");
+    }
+    else
+    {
+    printf("\nThe division of %.2f / %.2f is: %.2f\n", num1, num2, division);
     }
 
-    } while (answer != 5);
+    printf("\nThe multiplication of %.2f * %.2f is: %.2f\n\n", num1, num2, multiplication);
+
+    if(num1 < 0)
+    {
+    printf("\nIs not possible to calculate the factorial of the negative number.\n");
+    }
+    else
+    {
+    printf("\nthe factorial of %.2f is %ld\n", num1, factorial1);
+    }
+    if(num2 < 0){
+    printf("\nIs not possible to calculate the factorial of the negative number.\n\n");
+    }
+    else
+    {
+    printf("\nThe factorial of %.2f is %ld\n", num2, factorial2);
+    }
+
+    system("pause");
+    }
+    break;
+
+    case 'e':
+    printf("\nGood bye\n\n");
+    break;
+}
+
+   } while (option != 'e');
 
     return 0;
 }
