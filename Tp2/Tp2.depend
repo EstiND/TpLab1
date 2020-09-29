@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1601415336 source:d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayEmployees.h"
+
+1601418336 d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\arrayemployees.h
+
+1601417231 source:d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\arrayemployees.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"ArrayEmployees.h"
+
