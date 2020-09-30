@@ -181,14 +181,14 @@ void modifyEmployee(sEmployee employeeList[], int len)
 
     if(i != -1)
     {
-        printf("\n¿Que quieres modificar?\n1-Nombre.\n2-Apellido.\n3-Salario.\n4-Sector.\n");
+        printf("\nÂ¿Que quieres modificar?\n1-Nombre.\n2-Apellido.\n3-Salario.\n4-Sector.\n");
         scanf("%d", &answer);
         switch(answer)
         {
         case 1:
             printf("\nIngrese el nuevo nombre: ");
             scanf("%s", name);
-            printf("\n¿Esta seguro que quiere cambiar el nombre? use 's'/'n'\n");
+            printf("\nÂ¿Esta seguro que quiere cambiar el nombre? use 's'/'n'\n");
             fflush(stdin);
             scanf("%c", &confirm);
             if(confirm == 's')
@@ -207,7 +207,7 @@ void modifyEmployee(sEmployee employeeList[], int len)
         case 2:
             printf("\nIngrese el nuevo apellido: ");
             scanf("%s", name);
-            printf("\n¿Esta seguro que quiere cambiar el apellido? use 's'/'n'\n");
+            printf("\nÂ¿Esta seguro que quiere cambiar el apellido? use 's'/'n'\n");
             fflush(stdin);
             scanf("%c", &confirm);
             if(confirm == 's')
@@ -226,7 +226,7 @@ void modifyEmployee(sEmployee employeeList[], int len)
         case 3:
             printf("\nIngrese el nuevo salario: ");
             scanf("%f", &salary);
-            printf("\n¿Esta seguro que quiere cambiar el salario del empleado? use 's'/'n'\n");
+            printf("\nÂ¿Esta seguro que quiere cambiar el salario del empleado? use 's'/'n'\n");
             fflush(stdin);
             scanf("%c", &confirm);
             if(confirm == 's')
@@ -245,7 +245,7 @@ void modifyEmployee(sEmployee employeeList[], int len)
         case 4:
             printf("\nIngrese el nuevo sector: ");
             scanf("%d", &sector);
-            printf("\n¿Esta seguro que quiere cambiar el sector del empleado? use 's'/'n'\n");
+            printf("\nÂ¿Esta seguro que quiere cambiar el sector del empleado? use 's'/'n'\n");
             fflush(stdin);
             scanf("%c", &confirm);
             if(confirm == 's')
@@ -274,7 +274,7 @@ int removeEmployee(sEmployee employeeList[], int len)
 
     if(i != -1)
     {
-        printf("\n¿Estas seguro que quieres remover un empleado?\n usa 's'/'n'\n");
+        printf("\nÂ¿Estas seguro que quieres remover un empleado?\n usa 's'/'n'\n");
         fflush(stdin);
         scanf("%c", &answer);
         if(answer == 's')
@@ -313,7 +313,7 @@ int sortEmployees(sEmployee employeeList[], int len)
     {
         for(int j = i + 1; j < len; j++)
         {
-            if(employeeList[i].sector < employeeList[j].sector)
+            if(employeeList[i].sector < employeeList[j].sector && employeeList[i].isEmpty != 0 && employeeList[j].isEmpty != 0)
             {
                 auxEmployee = employeeList[i];
                 employeeList[i] = employeeList[j];
@@ -327,7 +327,7 @@ int sortEmployees(sEmployee employeeList[], int len)
     {
         for(int j = i + 1; j < len; j++)
         {
-            if(strcmp(employeeList[i].lastName, employeeList[j].lastName) < 0)
+            if(strcmp(employeeList[i].lastName, employeeList[j].lastName) < 0 && employeeList[i].isEmpty != 0 && employeeList[j].isEmpty != 0)
             {
                 auxEmployee = employeeList[i];
                 employeeList[i] = employeeList[j];
@@ -355,7 +355,7 @@ void showMenu(sEmployee employeeList[], int len)
 
             if(counter >= 2)
             {
-                printf("\n1-¿Quiere ordenar la lista de empleados por sector y apellido?\n2-¿Quiere calcular el salario promedio y cuantos empleados lo supera?\n3-Volver al menu.\n");
+                printf("\n1-Â¿Quiere ordenar la lista de empleados por sector y apellido?\n2-Â¿Quiere calcular el salario promedio y cuantos empleados lo supera?\n3-Volver al menu.\n");
                 scanf("%d", &answer);
                 break;
             }
