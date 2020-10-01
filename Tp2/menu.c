@@ -1,29 +1,14 @@
-<<<<<<< HEAD
-#include <stdio.h>
-#include <stdlib.h>
-#include "ArrayEmployees.h"
-#define L 1000
-
-int main()
-{
-    sEmployee employeeList[L];
-    initEmployees(employeeList, L);
-
-    menu(employeeList, L);
-
-    return 0;
-}
-=======
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "ArrayEmployees.h"
-#define TAM 1000
+#include "menu.h"
 
-int main()
+
+
+void menu(sEmployee employeeList[], int len)
 {
-    sEmployee employeeList[TAM];
-    initEmployees(employeeList, TAM);
     int answer;
     int flag;
     int flagAdd;
@@ -31,16 +16,15 @@ int main()
     int flagRemove;
     int flagPrint;
 
-
     do
     {
         system("cls");
-        answer = menu();
+        answer = printMenu();
 
         switch(answer)
         {
         case 1:
-            flagAdd = addAllEmployees(employeeList, TAM);
+            flagAdd = addAllEmployees(employeeList, len);
             if(flagAdd == 0)
             {
                 printf("\nNo hay mas lugar en el sistema.\n");
@@ -49,11 +33,11 @@ int main()
             break;
 
         case 2:
-            flag = searchEmployee(employeeList, TAM);
+            flag = searchEmployee(employeeList, len);
             if(flag == 1)
             {
-                printEmployees(employeeList, TAM);
-                modifyEmployee(employeeList, TAM);
+                printEmployees(employeeList, len);
+                modifyEmployee(employeeList, len);
             }
             else
             {
@@ -63,11 +47,11 @@ int main()
             break;
 
         case 3:
-            flag = searchEmployee(employeeList, TAM);
+            flag = searchEmployee(employeeList, len);
             if(flag == 1)
             {
-                printEmployees(employeeList, TAM);
-                flagRemove = removeEmployee(employeeList, TAM);
+                printEmployees(employeeList, len);
+                flagRemove = removeEmployee(employeeList, len);
                 if(flagRemove == 1)
                 {
                     printf("\nEmpleado removido.\n");
@@ -87,14 +71,14 @@ int main()
             break;
 
         case 4:
-            flag = searchEmployee(employeeList, TAM);
+            flag = searchEmployee(employeeList, len);
             if(flag == 1)
             {
-                flagPrint = printEmployees(employeeList, TAM);
+                flagPrint = printEmployees(employeeList, len);
                 if(flagPrint == 1)
                 {
                     system("pause");
-                    showMenu(employeeList, TAM);
+                    showMenu(employeeList, len);
                 }
             }
             else
@@ -115,7 +99,4 @@ int main()
         }
     }
     while(answer != 5);
-
-    return 0;
 }
->>>>>>> 6f9a6fa8eff4b4c2a87df2f14447aba1285317fe
