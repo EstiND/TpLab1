@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # depslib dependency file v1.0
 1601512632 source:d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\main.c
 	<stdio.h>
@@ -7,7 +6,21 @@
 
 1601512989 d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\arrayemployees.h
 
-1601513850 source:d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\arrayemployees.c
+1601512449 source:d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\arrayemployees.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"ArrayEmployees.h"
+
+1601512632 source:d:\fac\primer cuatrimestre programación segundo intento\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h"
+
+1601668041 d:\fac\primer cuatrimestre programación segundo intento\tp2\arrayemployees.h
+
+1601668558 source:d:\fac\primer cuatrimestre programación segundo intento\tp2\arrayemployees.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -15,9 +28,9 @@
 	"ArrayEmployees.h"
 	"menu.h"
 
-1601514243 d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\menu.h
+1601667566 d:\fac\primer cuatrimestre programación segundo intento\tp2\menu.h
 
-1601513851 source:d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\menu.c
+1601667892 source:d:\fac\primer cuatrimestre programación segundo intento\tp2\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -25,21 +38,3 @@
 	"ArrayEmployees.h"
 	"menu.h"
 
-=======
-# depslib dependency file v1.0
-1601415336 source:d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"ArrayEmployees.h"
-
-1601418336 d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\arrayemployees.h
-
-1601417231 source:d:\fac\primer cuatrimestre programación segundo intento\tp_laboratorio_1\tp2\arrayemployees.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<ctype.h>
-	"ArrayEmployees.h"
-
->>>>>>> 6f9a6fa8eff4b4c2a87df2f14447aba1285317fe

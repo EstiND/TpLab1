@@ -10,4 +10,11 @@
  */
 void menu(sEmployee employeeList[], int len);
 
+/** \brief Muestra un parrafo donde se pide por una respuesta.
+ *
+ * \return int Retorna el numero recibido indicando la opcion.
+ *
+ */
+int printMenu();
+
 #endif // MENU_H_INCLUDED

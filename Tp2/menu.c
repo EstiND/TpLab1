@@ -5,8 +5,6 @@
 #include "ArrayEmployees.h"
 #include "menu.h"
 
-
-
 void menu(sEmployee employeeList[], int len)
 {
     int answer;
@@ -93,10 +91,20 @@ void menu(sEmployee employeeList[], int len)
             break;
 
         default:
-            printf("\nError, por favor use numeros para seleecionar la opcion.\n");
+            printf("\nUse numeros para acceder al programa.\n");
             system("pause");
-            break;
+            fflush(stdin);
         }
     }
     while(answer != 5);
+}
+
+int printMenu()
+{
+    int option;
+
+    printf("\n\nBienvenido!, Utiliza numeros para seleccionar la opcion:\n1-Alta empleado.\n2-Modificar empleado.\n3-Remover empleado.\n4-Mostrar empleados.\n5-Salir.\n");
+    scanf("%d", &option);
+
+    return option;
 }

@@ -38,13 +38,6 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-<<<<<<< HEAD
-		<Unit filename="menu.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="menu.h" />
-=======
->>>>>>> 6f9a6fa8eff4b4c2a87df2f14447aba1285317fe
 		<Extensions>
 			<code_completion />
 			<envvars />
