@@ -550,6 +550,7 @@ void calculateSalary(sEmployee employeeList[], int len)
                 if(employeeList[i].salary > average && employeeList[i].isEmpty != 1)
                 {
                     printf("\n%4d. %12s %10s.       %.2f.        %2d.", employeeList[i].id, employeeList[i].name, employeeList[i].lastName, employeeList[i].salary, employeeList[i].sector);
+                    printSector(employeeList[i]);
 
                 }
             }

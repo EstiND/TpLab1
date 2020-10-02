@@ -38,3 +38,28 @@
 	"ArrayEmployees.h"
 	"menu.h"
 
+1601669538 source:d:\git trys\tp_laboratorio_1-master\tp2\arrayemployees.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"ArrayEmployees.h"
+	"menu.h"
+
+1601669538 d:\git trys\tp_laboratorio_1-master\tp2\arrayemployees.h
+
+1601669538 d:\git trys\tp_laboratorio_1-master\tp2\menu.h
+
+1601669538 source:d:\git trys\tp_laboratorio_1-master\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h"
+
+1601669538 source:d:\git trys\tp_laboratorio_1-master\tp2\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"ArrayEmployees.h"
+	"menu.h"
+
